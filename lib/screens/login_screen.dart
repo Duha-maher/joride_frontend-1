@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'sign_in.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -105,20 +106,28 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 20),
 
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text("Don't have an account? "),
-                  Text(
-                    "sign up",
-                    style: TextStyle(
-                      color: Color(0xFFF4C430),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    const Text("Don't have an account? "),
+    GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const CreateAccountScreen()),
+        );
+      },
+      child: const Text(
+        "sign up",
+        style: TextStyle(
+          color: Color(0xFFF4C430),
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
+  ],
+),
 
-              const SizedBox(height: 30),
+const SizedBox(height: 30),
             ],
           ),
         ),
