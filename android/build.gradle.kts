@@ -1,3 +1,14 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.4.2") // مثال
+        classpath("com.google.gms:google-services:4.3.8")
+    }
+}
+
 allprojects {
     repositories {
         google()
@@ -5,6 +16,7 @@ allprojects {
     }
 }
 
+// باقي كودك اللي كتبته
 val newBuildDir: Directory =
     rootProject.layout.buildDirectory
         .dir("../../build")

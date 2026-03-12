@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'sign_in.dart';
+import 'package:joride_app/screens/sign_in.dart';
+// التصحيح هنا
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -7,17 +8,14 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F3EC), // اللون البيج
+      backgroundColor: const Color(0xFFF5F3EC),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const SizedBox(height: 100),
 
-              const SizedBox(height: 60),
-
-              // JoRide Title
               const Text(
                 "JoRide",
                 style: TextStyle(
@@ -27,21 +25,8 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 10),
+              const SizedBox(height: 50),
 
-              // Yellow line
-              Container(
-                width: 150,
-                height: 5,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF4C430),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-
-              const SizedBox(height: 60),
-
-              // Phone Field
               TextField(
                 decoration: InputDecoration(
                   hintText: "Phone Number",
@@ -57,7 +42,6 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // Password Field
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
@@ -72,62 +56,45 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 10),
-
-              Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  "Forgot Password?",
-                  style: TextStyle(color: Colors.grey[600]),
-                ),
-              ),
-
               const Spacer(),
 
-              // Log In Button
               SizedBox(
                 width: double.infinity,
                 height: 55,
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFF4C430),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                  ),
                   onPressed: () {},
-                  child: const Text(
-                    "Log In",
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
+                  child: const Text("Log In"),
                 ),
               ),
 
               const SizedBox(height: 20),
 
               Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-    const Text("Don't have an account? "),
-    GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const CreateAccountScreen()),
-        );
-      },
-      child: const Text(
-        "sign up",
-        style: TextStyle(
-          color: Color(0xFFF4C430),
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-    ),
-  ],
-),
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Don't have an account? "),
 
-const SizedBox(height: 30),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CreateAccountScreen(),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      "Sign Up",
+                      style: TextStyle(
+                        color: Color(0xFFF4C430),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 30),
             ],
           ),
         ),

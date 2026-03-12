@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "395126025000",
+    "project_id": "joride1",
+    "storage_bucket": "joride1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395126025000:android:abc7fcd2ee722e6a047e1d",
+        "android_client_info": {
+          "package_name": "com.example.joride_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk_Ka_zykvFarMjs2H_5Q7LK0oTAjSzDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
