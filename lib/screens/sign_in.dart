@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'driver_sigin.dart';
 
 class CreateAccountScreen extends StatefulWidget {
   const CreateAccountScreen({super.key});
@@ -130,7 +131,12 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
         children: [
           Expanded(
             child: GestureDetector(
-              onTap: () => setState(() => isPassenger = false),
+             onTap: () {
+  Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(builder: (context) => const CreateDriverAccountScreen()),
+  );
+},
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 250),
                 curve: Curves.easeInOut,
