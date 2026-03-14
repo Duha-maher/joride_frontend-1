@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'driver_sigin.dart';
+import 'creatpasswored.dart';
 
 class CreateAccountScreen extends StatefulWidget {
   const CreateAccountScreen({super.key});
@@ -102,7 +103,10 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                     ),
                     elevation: 0,
                   ),
-                  onPressed: () {},
+                  onPressed: () {Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CreatePasswordScreen()),
+                 );},
                   child: const Text(
                     'Continue',
                     style: TextStyle(
